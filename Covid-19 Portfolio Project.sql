@@ -83,8 +83,8 @@ select d.continent, d.location, d.date, d.population, v.new_vaccinations,
 sum(convert (bigint, v.new_vaccinations)) over (partition by d.location order by d.date, d.location) as 'People Vaccinated'
 from CovidDeaths d
 join CovidVaccinations v
-on d.location = v.location
-and d.date = v.date
+  on d.location = v.location
+  and d.date = v.date
 where d.continent is not null 
 order by 2,3
 
@@ -97,8 +97,8 @@ select d.continent, d.location, d.date, d.population, v.new_vaccinations,
 sum(convert (bigint, v.new_vaccinations)) over (partition by d.location order by d.date, d.location) as People_Vaccinated
 from CovidDeaths d
 join CovidVaccinations v
-on d.location = v.location
-and d.date = v.date
+  on d.location = v.location
+  and d.date = v.date
 where d.continent is not null 
 )
 select * , (People_Vaccinated/population)*100 as PercentPopulationVaccinated
@@ -124,8 +124,8 @@ select d.continent, d.location, d.date, d.population, v.new_vaccinations,
 sum(convert (bigint, v.new_vaccinations)) over (partition by d.location order by d.date, d.location) as People_Vaccinated
 from CovidDeaths d
 join CovidVaccinations v
-on d.location = v.location
-and d.date = v.date
+  on d.location = v.location
+  and d.date = v.date
 ---where d.continent is not null 
 
 
@@ -141,8 +141,8 @@ select d.continent, d.location, d.date, d.population, v.new_vaccinations,
 sum(convert (bigint, v.new_vaccinations)) over (partition by d.location order by d.date, d.location) as People_Vaccinated
 from CovidDeaths d
 join CovidVaccinations v
-on d.location = v.location
-and d.date = v.date
+  on d.location = v.location
+  and d.date = v.date
 where d.continent is not null 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------

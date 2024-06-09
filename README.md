@@ -1,4 +1,6 @@
 #COVID-19 Data Analysis Project Summary
+
+
 Introduction:
 As a personal project, I explored COVID-19 data using SQL and Tableau to gain insights into the global pandemic's trends and patterns. Leveraging my data extraction, cleaning, and visualization skills, I aimed to comprehensively analyze the COVID-19 situation.
 

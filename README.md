@@ -2,7 +2,7 @@
 
 
 Introduction:
-As a personal project, I explored COVID-19 data using SQL and Tableau to gain insights into the global pandemic's trends and patterns. Leveraging my data extraction, cleaning, and visualization skills, I aimed to comprehensively analyze the COVID-19 situation.
+I explored COVID-19 data using SQL and Tableau to gain insights into the global pandemic's trends and patterns. Leveraging my data extraction, cleaning, and visualization skills, I aimed to comprehensively analyze the COVID-19 situation.
 
 Data Extraction and Cleaning:
 Utilizing SQL, I extracted COVID-19 data from the World Health Organization (WHO) database. This involved rigorous cleaning processes to ensure data integrity, including handling missing values and standardizing data formats. By employing SQL methodologies such as joins, temporary tables, aggregate functions, and views, I organized the data for in-depth analysis.

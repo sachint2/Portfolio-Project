@@ -1,0 +1,26 @@
+Q&A Insights for Nashville Housing Data 
+
+1: What format was the SaleDate field initially in, and how did we convert it?
+The SaleDate field initially had a non-standard date format. We converted it to a standardized DATE format 
+using the CONVERT function and stored it in a new column, SaleDateConverted. This allows for consistent and 
+reliable date comparisons in future analyses.
+2: How did we handle missing values in the PropertyAddress column?
+By joining records with the same ParcelID, we filled in missing addresses where possible. Using an ISNULL function
+allowed us to substitute missing PropertyAddress entries with known addresses from matching ParcelID records. This 
+ensures all properties have address data.
+
+3: Why did we separate PropertyAddress and OwnerAddress into individual fields?
+Splitting addresses into Address, City, and State components enhances data granularity and usability. 
+This breakdown supports more detailed location-based analysis, such as city-specific trends or address-based filtering.
+
+4:What was the purpose of replacing Y and N values in the SoldAsVacant column?
+We standardized the SoldAsVacant field by changing Y and N values to Yes and No. This makes the data more intuitive
+and human-readable, particularly for non-technical users.
+
+5:How did we identify and remove duplicate records?
+A Common Table Expression (CTE) with the ROW_NUMBER() function helped us find duplicate entries by parcelID, 
+PropertyAddress, SalePrice, SaleDate, and LegalReference. We retained only the first occurrence of each duplicate, ensuring unique records within the dataset.
+
+6: Why were certain columns dropped from the final dataset?
+After completing all necessary transformations, we dropped redundant columns (OwnerAddress, TaxDistrict, PropertyAddress, and SaleDate) to reduce clutter. 
+These columns were either transformed or contained data now represented in other fields, making them unnecessary for analysis.
